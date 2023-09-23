@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://clajucxagnbxy"]
+
+[ext_resource type="Script" path="res://camera_controller.gd" id="1_bpyn2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fwu2l"]
+
+[node name="Controller" type="Node3D"]
+
+[node name="Camera" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Camera"]
+transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 3.5902, 4.12253, 3.46895)
+script = ExtResource("1_bpyn2")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0157578, 0.364314, 0.100929)
+mesh = SubResource("BoxMesh_fwu2l")
